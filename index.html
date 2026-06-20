@@ -7,8 +7,18 @@
 <meta name="description" content="THENUX Jarvis is a voice and visual AI automation assistant for Windows. Offline via Ollama or hybrid cloud via the T-Nex model suite.">
 <link rel="stylesheet" href="css/style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 </head>
 <body>
+
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-ring"></div>
+    <span>JARVIS</span>
+  </div>
+</div>
 
 <nav class="nav">
   <div class="wrap">
@@ -41,6 +51,7 @@
   </div>
 
   <div class="radar-wrap">
+    <img src="public/WizardImageFile.png" alt="" class="hero-glyph" id="heroGlyph">
     <div class="radar" id="radar">
       <div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div><div class="ring r4"></div>
       <div class="crosshair"></div>
@@ -170,6 +181,7 @@
 <section class="download" id="download">
   <div class="wrap">
     <div class="panel">
+      <img src="public/WizardSmallImageFile.png" alt="" class="download-badge" id="downloadBadge">
       <div class="eyebrow" style="justify-content:center;">Get started</div>
       <h2 style="margin-top:14px;">Install Jarvis on Windows.</h2>
       <p>One installer, fully branded — desktop shortcuts, uninstall pipeline, and your choice of offline or hybrid cloud mode set up from the HUD.</p>
@@ -181,7 +193,7 @@
 
 <footer>
   <div class="wrap">
-    <div class="fmeta">© 2026 THENUX — Built by Thenula Panapitiya, 17, Sri Lanka</div>
+    <div class="fmeta"><img src="public/WizardSmallImageFile.png" alt="" class="footer-glyph">© 2026 THENUX — Built by Thenula Panapitiya, 17, Sri Lanka</div>
     <div class="flinks">
       <a href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2">GitHub</a>
       <a href="http://www.thenuxofc.store">thenuxofc.store</a>
