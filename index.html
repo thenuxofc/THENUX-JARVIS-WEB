@@ -24,15 +24,35 @@
   <div class="wrap">
     <div class="brand"><span class="dot"></span><div>THENUX JARVIS<small>SYSTEM ASSISTANT — V2</small></div></div>
     <div class="navlinks">
+      <a href="#showcase">Showcase</a>
       <a href="#pipeline">Pipeline</a>
       <a href="#features">Features</a>
       <a href="#models">Models</a>
       <a href="#tools">Tools</a>
       <a href="#changelog">Changelog</a>
-      <a class="btn solid" href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2/releases/download/v2.0/THENUX_Jarvis_Setup.exe">Download</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn solid magnetic" href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2/releases/download/v2.0/THENUX_Jarvis_Setup.exe">Download</a>
     </div>
+    <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <a href="#showcase" class="mlink">Showcase</a>
+    <a href="#pipeline" class="mlink">Pipeline</a>
+    <a href="#features" class="mlink">Features</a>
+    <a href="#models" class="mlink">Models</a>
+    <a href="#tools" class="mlink">Tools</a>
+    <a href="#changelog" class="mlink">Changelog</a>
+    <a href="#faq" class="mlink">FAQ</a>
+    <a class="btn solid" id="mobileDownload" href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2/releases/download/v2.0/THENUX_Jarvis_Setup.exe">↓ Download v2.0</a>
+    <a class="btn ghost" href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2">View Source</a>
+    <a class="btn ghost" href="admin.html">⚙ Admin</a>
+  </div>
+</div>
 
 <header class="hero wrap">
   <div>
@@ -40,8 +60,9 @@
     <h1>Just A Rather<br>Very Intelligent<br>System.</h1>
     <p class="sub">A system-wide voice and visual AI assistant that runs fully offline on Ollama, or in hybrid cloud mode through the custom T-Nex model suite. Speaks, sees, and controls your machine.</p>
     <div class="ctas">
-      <a class="btn solid" href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2/releases/download/v2.0/THENUX_Jarvis_Setup.exe">↓ Download v2.0 — Windows</a>
-      <a class="btn ghost" href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2">View Source</a>
+      <a class="btn solid magnetic" href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2/releases/download/v2.0/THENUX_Jarvis_Setup.exe">↓ Download v2.0 — Windows</a>
+      <a class="btn ghost magnetic" href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2">View Source</a>
+      <button class="btn ghost magnetic" id="copyLinkBtn" type="button">⧉ Copy Download Link</button>
     </div>
     <div class="hero-stats">
       <div><b>19</b><span>System Tools</span></div>
@@ -60,6 +81,40 @@
     </div>
   </div>
 </header>
+
+<section class="showcase" id="showcase">
+  <div class="wrap showcase-grid">
+    <div class="showcase-frame" data-tilt>
+      <div class="frame-glow"></div>
+      <img src="public/WizardImageFile.png" alt="THENUX Jarvis HUD preview" class="showcase-img">
+      <span class="frame-tag live">● LIVE HUD</span>
+      <span class="frame-tag corner-br">v2.0</span>
+    </div>
+    <div class="showcase-copy">
+      <div class="eyebrow">Inside the HUD</div>
+      <h2>A cyberpunk control room, not a chat box.</h2>
+      <p class="sub">Real-time logs, face visualization, drag-and-drop file zone, and a live system monitor — all rendered in a frameless PyQt6 window that sits over your desktop.</p>
+      <ul class="showcase-list">
+        <li><span>01</span>Real-time transcript &amp; agent log stream</li>
+        <li><span>02</span>Animated face / waveform visualizer while speaking</li>
+        <li><span>03</span>Drag-and-drop zone for instant file processing</li>
+        <li><span>04</span>Live ping + system resource monitor</li>
+      </ul>
+      <a class="btn solid magnetic" href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2/releases/download/v2.0/THENUX_Jarvis_Setup.exe">↓ Try it on Windows</a>
+    </div>
+  </div>
+
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>PYTHON</span><span>•</span><span>PYTORCH</span><span>•</span><span>OPENCV</span><span>•</span>
+      <span>ELECTRON</span><span>•</span><span>NODE.JS</span><span>•</span><span>DOCKER</span><span>•</span>
+      <span>WHISPER</span><span>•</span><span>OLLAMA</span><span>•</span><span>PYQT6</span><span>•</span>
+      <span>PYTHON</span><span>•</span><span>PYTORCH</span><span>•</span><span>OPENCV</span><span>•</span>
+      <span>ELECTRON</span><span>•</span><span>NODE.JS</span><span>•</span><span>DOCKER</span><span>•</span>
+      <span>WHISPER</span><span>•</span><span>OLLAMA</span><span>•</span><span>PYQT6</span><span>•</span>
+    </div>
+  </div>
+</section>
 
 <section class="pipeline" id="pipeline">
   <div class="wrap">
@@ -178,6 +233,48 @@
   </div>
 </section>
 
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">FAQ</div>
+      <h2>Before you install.</h2>
+      <p>The short answers. Open an issue on GitHub if yours isn't here.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Does Jarvis need an internet connection?</span><span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><p>No — it runs fully offline through Ollama. Hybrid cloud mode through the T-Nex worker is optional, for extra speed and reasoning power.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>What platforms are supported?</span><span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><p>Windows is the only supported platform right now, distributed as a single branded installer built with PyInstaller and Inno Setup.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Can it actually control my computer?</span><span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><p>Yes — within the 19 built-in tools: opening apps, managing files, simulating keyboard/mouse input, automating the browser, and more, all listed in the Tools section above.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Is my data sent anywhere?</span><span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><p>Only if you choose hybrid cloud mode, in which case requests go to the THENUX AI worker. Offline mode keeps everything on your machine.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button">
+          <span>Where do I report bugs or request features?</span><span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><p>Open an issue on the GitHub repository — linked in the navbar and footer of this page.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="download" id="download">
   <div class="wrap">
     <div class="panel">
@@ -203,6 +300,9 @@
 </footer>
 
 <div class="admin-link"><a href="admin.html">⚙ Admin</a></div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+<div class="toast" id="toast"></div>
 
 <script src="js/main.js"></script>
 </body>
