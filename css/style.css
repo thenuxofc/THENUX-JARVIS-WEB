@@ -25,7 +25,8 @@
 }
 
 *{ box-sizing:border-box; margin:0; padding:0; }
-html{ scroll-behavior:smooth; }
+html.lenis{ height:auto; }
+html{ scroll-behavior:auto; }
 body{
   background:var(--bg);
   color:var(--text);
@@ -33,6 +34,40 @@ body{
   line-height:1.6;
   overflow-x:hidden;
   position:relative;
+}
+
+/* ---------------- PRELOADER ---------------- */
+.loader{
+  position:fixed; inset:0; z-index:9999;
+  background:var(--bg);
+  display:flex; align-items:center; justify-content:center;
+}
+.loader-inner{ display:flex; flex-direction:column; align-items:center; gap:18px; }
+.loader-ring{
+  width:54px; height:54px; border-radius:50%;
+  border:2px solid var(--panel-line); border-top-color:var(--cyan);
+  animation:loader-spin .9s linear infinite;
+}
+@keyframes loader-spin{ to{ transform:rotate(360deg); } }
+.loader-inner span{
+  font-family:var(--display); letter-spacing:.3em; font-size:.78rem; color:var(--text-dim);
+}
+
+/* ---------------- IMAGE GLYPHS ---------------- */
+.hero-glyph{
+  position:absolute; left:50%; top:50%; width:46%;
+  transform:translate(-50%,-50%);
+  opacity:.16; filter:saturate(0) brightness(1.6) drop-shadow(0 0 40px rgba(0,240,255,.25));
+  pointer-events:none; z-index:0; user-select:none;
+  mix-blend-mode:screen;
+}
+.download-badge{
+  width:64px; height:64px; object-fit:contain; margin:0 auto 18px;
+  filter:drop-shadow(0 0 18px rgba(0,240,255,.35));
+}
+.footer-glyph{
+  width:18px; height:18px; object-fit:contain; vertical-align:middle;
+  margin-right:8px; opacity:.85; border-radius:4px;
 }
 
 /* ambient grid + scanline texture */
@@ -93,8 +128,14 @@ section{ position:relative; z-index:1; }
 .nav{
   position:fixed; top:0; left:0; right:0; z-index:100;
   backdrop-filter:blur(14px);
-  background:rgba(5,8,13,0.7);
-  border-bottom:1px solid var(--panel-line);
+  background:rgba(5,8,13,0.55);
+  border-bottom:1px solid transparent;
+  transition:background .35s ease, border-color .35s ease, padding .35s ease;
+}
+.nav.scrolled{
+  background:rgba(5,8,13,0.86);
+  border-bottom-color:var(--panel-line);
+  box-shadow:0 8px 30px rgba(0,0,0,.25);
 }
 .nav .wrap{
   display:flex; align-items:center; justify-content:space-between;
