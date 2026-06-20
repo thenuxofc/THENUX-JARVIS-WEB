@@ -1,0 +1,51 @@
+/* ============================================================
+   Admin panel styles (extends style.css)
+   ============================================================ */
+
+.admin-body{ min-height:100vh; }
+
+.login-screen{
+  min-height:100vh; display:flex; align-items:center; justify-content:center; padding-top:72px;
+}
+.login-card{
+  width:100%; max-width:380px; border:1px solid var(--panel-line); border-radius:var(--radius);
+  background:var(--panel); padding:40px 34px; text-align:left;
+}
+.login-card h2{ font-family:var(--display); font-size:1.5rem; margin:12px 0 8px; }
+.login-card p{ color:var(--text-dim); font-size:.9rem; margin-bottom:24px; }
+.login-card input{
+  width:100%; padding:13px 14px; margin-bottom:14px; border-radius:8px;
+  border:1px solid var(--panel-line); background:var(--bg); color:var(--text);
+  font-family:var(--mono); font-size:.92rem; outline:none; transition:border-color .2s;
+}
+.login-card input:focus{ border-color:var(--cyan); }
+.login-error{
+  display:none; color:var(--pink); font-family:var(--mono); font-size:.78rem; margin-top:12px;
+}
+.login-error.show{ display:block; }
+
+.admin-panel{ padding:130px 0 100px; min-height:100vh; }
+
+.editor-grid{ display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+@media(max-width:900px){ .editor-grid{ grid-template-columns:1fr; } }
+
+.editor-col{ display:flex; flex-direction:column; }
+.editor-label{
+  font-family:var(--mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--text-faint); margin-bottom:10px;
+}
+#mdInput{
+  width:100%; min-height:520px; resize:vertical; padding:20px; border-radius:var(--radius);
+  border:1px solid var(--panel-line); background:var(--panel); color:var(--text);
+  font-family:var(--mono); font-size:.86rem; line-height:1.6; outline:none; transition:border-color .2s;
+}
+#mdInput:focus{ border-color:var(--cyan); }
+
+.editor-actions{ display:flex; align-items:center; gap:12px; margin-top:16px; flex-wrap:wrap; }
+.save-status{ font-family:var(--mono); font-size:.78rem; color:var(--mint); opacity:0; transition:opacity .3s; }
+.save-status.show{ opacity:1; }
+
+.preview-box{
+  border:1px solid var(--panel-line); border-radius:var(--radius); background:var(--bg-alt);
+  padding:24px 26px; min-height:520px; overflow-y:auto;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THENUX JARVIS — Offline + Cloud Hybrid AI System Assistant</title>
+<meta name="description" content="THENUX Jarvis is a voice and visual AI automation assistant for Windows. Offline via Ollama or hybrid cloud via the T-Nex model suite.">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span><div>THENUX JARVIS<small>SYSTEM ASSISTANT — V2</small></div></div>
+    <div class="navlinks">
+      <a href="#pipeline">Pipeline</a>
+      <a href="#features">Features</a>
+      <a href="#models">Models</a>
+      <a href="#tools">Tools</a>
+      <a href="#changelog">Changelog</a>
+      <a class="btn solid" href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2/releases/download/v2.0/THENUX_Jarvis_Setup.exe">Download</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero wrap">
+  <div>
+    <div class="eyebrow">Online · Offline-capable · Windows</div>
+    <h1>Just A Rather<br>Very Intelligent<br>System.</h1>
+    <p class="sub">A system-wide voice and visual AI assistant that runs fully offline on Ollama, or in hybrid cloud mode through the custom T-Nex model suite. Speaks, sees, and controls your machine.</p>
+    <div class="ctas">
+      <a class="btn solid" href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2/releases/download/v2.0/THENUX_Jarvis_Setup.exe">↓ Download v2.0 — Windows</a>
+      <a class="btn ghost" href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2">View Source</a>
+    </div>
+    <div class="hero-stats">
+      <div><b>19</b><span>System Tools</span></div>
+      <div><b>7</b><span>T-Nex Models</span></div>
+      <div><b>3</b><span>TTS Engines</span></div>
+    </div>
+  </div>
+
+  <div class="radar-wrap">
+    <div class="radar" id="radar">
+      <div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div><div class="ring r4"></div>
+      <div class="crosshair"></div>
+      <div class="sweep"></div>
+      <div class="core">JARVIS<br>CORE</div>
+    </div>
+  </div>
+</header>
+
+<section class="pipeline" id="pipeline">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Live pipeline</div>
+      <h2>From your voice to a finished action.</h2>
+      <p>Every request moves through the same loop — captured, understood, executed, and spoken back — whether it's running offline or through the cloud worker.</p>
+    </div>
+    <div class="pipe-row">
+      <div class="pipe-node" data-reveal><div class="tag">01 · Input</div><h4>Mic / HUD</h4><p>Voice activity detection or typed text from the HUD console.</p></div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node" data-reveal><div class="tag">02 · STT</div><h4>Whisper / Vosk</h4><p>Offline speech-to-text transcription, language auto-detected.</p></div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node" data-reveal><div class="tag">03 · Reasoning</div><h4>Ollama / T-Nex</h4><p>Routes to a local model or the THENUX AI cloud worker.</p></div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node" data-reveal><div class="tag">04 · Execution</div><h4>Agent Tasks</h4><p>Dispatches to system, file, browser, or messaging tools.</p></div>
+      <div class="pipe-arrow">→</div>
+      <div class="pipe-node" data-reveal><div class="tag">05 · Output</div><h4>Kokoro / EdgeTTS</h4><p>Spoken response back through the selected voice engine.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Capabilities</div>
+      <h2>Built for control, not just conversation.</h2>
+      <p>Jarvis doesn't just answer — it reaches into the OS, the browser, and your files to get things done.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card" data-reveal><span class="num">01</span><h3>Zero-Window Execution</h3><p>Background scripts run silently — no console flicker during VAD, TTS, or status checks.</p></div>
+      <div class="feat-card" data-reveal><span class="num">02</span><h3>THENUX AI Integration</h3><p>Connects to a dedicated cloud worker for speed and styling using the T-Nex model suite.</p></div>
+      <div class="feat-card" data-reveal><span class="num">03</span><h3>Persistent Memory</h3><p>Remembers names, preferences, and context across sessions, applied automatically.</p></div>
+      <div class="feat-card" data-reveal><span class="num">04</span><h3>File Drop Zone</h3><p>Drag images, PDFs, Word docs, or spreadsheets straight onto the HUD for instant processing.</p></div>
+      <div class="feat-card" data-reveal><span class="num">05</span><h3>Branded Installer</h3><p>A full game-like setup experience with shortcuts, icons, and clean uninstall.</p></div>
+      <div class="feat-card" data-reveal><span class="num">06</span><h3>Git & Workspace Automation</h3><p>Commit, push, and pull by voice — or launch your whole coding workspace in one phrase.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="models" id="models">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">T-Nex model suite</div>
+      <h2>Seven models, one routing layer.</h2>
+      <p>Jarvis picks the right model for the job — fast chat, deep reasoning, creative work, or full builds.</p>
+    </div>
+    <table class="model-table">
+      <thead><tr><th>Model ID</th><th>Name</th><th>Type</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td class="mid">t-nex-1.0</td><td class="mname">T-Nex 1.0</td><td><span class="pill">Chat</span></td><td><p>Fast everyday model for normal chat & API testing.</p></td></tr>
+        <tr><td class="mid">t-nex-2.0</td><td class="mname">T-Nex 2.0</td><td><span class="pill">Chat</span></td><td><p>Balanced smart model for general questions & content.</p></td></tr>
+        <tr><td class="mid">t-nex-prime</td><td class="mname">T-Nex Prime</td><td><span class="pill">Reasoning</span></td><td><p>Advanced reasoning, planning, writing, problem-solving.</p></td></tr>
+        <tr><td class="mid">t-nex-studio</td><td class="mname">T-Nex Studio</td><td><span class="pill">Creative</span></td><td><p>UI/UX, landing pages, branding, creative content.</p></td></tr>
+        <tr><td class="mid">t-nex-ultra</td><td class="mname">T-Nex Ultra</td><td><span class="pill">Builder</span></td><td><p>Premium full-stack code & SaaS product builder.</p></td></tr>
+        <tr><td class="mid">t-nex-infinity</td><td class="mname">T-Nex Infinity</td><td><span class="pill">Pro</span></td><td><p>High-power coding & large project generation.</p></td></tr>
+        <tr><td class="mid">t-nex-automate</td><td class="mname">T-Nex Automate</td><td><span class="pill">Automation</span></td><td><p>Structured JSON automation actions for apps & agents.</p></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="tools" id="tools">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Tool suite — 19 actions</div>
+      <h2>Everything it can reach into.</h2>
+      <p>Grouped by where the action happens — your system, the web, your code, or your day.</p>
+    </div>
+    <div class="tool-tabs">
+      <button class="tool-tab active" data-cat="system">System & Files</button>
+      <button class="tool-tab" data-cat="web">Web & Browser</button>
+      <button class="tool-tab" data-cat="dev">Developer & Agents</button>
+      <button class="tool-tab" data-cat="life">Lifestyle & Messaging</button>
+    </div>
+    <div class="tool-grid" id="toolGrid">
+      <!-- system -->
+      <div class="tool-card show" data-cat="system"><div class="tname">open_app</div><div class="taction">Launch Apps / Sites</div><div class="tcap">Opens any program or website URL.</div></div>
+      <div class="tool-card show" data-cat="system"><div class="tname">computer_settings</div><div class="taction">OS Settings & Keys</div><div class="tcap">Volume, brightness, dark mode, lock, shortcuts.</div></div>
+      <div class="tool-card show" data-cat="system"><div class="tname">computer_control</div><div class="taction">Keyboard / Mouse Sim</div><div class="tcap">Clicks, typing, scrolling, paste.</div></div>
+      <div class="tool-card show" data-cat="system"><div class="tname">file_controller</div><div class="taction">Local File System</div><div class="tcap">List, create, copy, delete, move, rename, read/write.</div></div>
+      <div class="tool-card show" data-cat="system"><div class="tname">file_processor</div><div class="taction">Intelligent Parser</div><div class="tcap">Resizes images, extracts frames, sorts CSVs, converts formats.</div></div>
+      <!-- web -->
+      <div class="tool-card" data-cat="web"><div class="tname">web_search</div><div class="taction">Search & Compare</div><div class="tcap">DuckDuckGo queries with structured summaries.</div></div>
+      <div class="tool-card" data-cat="web"><div class="tname">browser_control</div><div class="taction">Web Automation</div><div class="tcap">Navigates, clicks, types, fills forms, screenshots.</div></div>
+      <div class="tool-card" data-cat="web"><div class="tname">screen_process</div><div class="taction">Visual Analysis</div><div class="tcap">Camera/screen captures answer visual questions.</div></div>
+      <div class="tool-card" data-cat="web"><div class="tname">youtube_video</div><div class="taction">Video Player</div><div class="tcap">Plays clips, summarizes, fetches trending data.</div></div>
+      <div class="tool-card" data-cat="web"><div class="tname">flight_finder</div><div class="taction">Travel Finder</div><div class="tcap">Searches Google Flights, saves to Notepad.</div></div>
+      <!-- dev -->
+      <div class="tool-card" data-cat="dev"><div class="tname">code_helper</div><div class="taction">Code Assistant</div><div class="tcap">Writes, edits, explains, compiles, runs scripts.</div></div>
+      <div class="tool-card" data-cat="dev"><div class="tname">dev_agent</div><div class="taction">Full-Stack Builder</div><div class="tcap">Generates multi-file apps from scratch.</div></div>
+      <div class="tool-card" data-cat="dev"><div class="tname">agent_task</div><div class="taction">Autonomous Planner</div><div class="tcap">Breaks complex goals into sub-tasks.</div></div>
+      <!-- life -->
+      <div class="tool-card" data-cat="life"><div class="tname">game_updater</div><div class="taction">Steam/Epic Launcher</div><div class="tcap">Downloads, installs, updates, launches games.</div></div>
+      <div class="tool-card" data-cat="life"><div class="tname">weather_report</div><div class="taction">Real-time Weather</div><div class="tcap">Live temps, precipitation, conditions.</div></div>
+      <div class="tool-card" data-cat="life"><div class="tname">send_message</div><div class="taction">Messaging Dispatcher</div><div class="tcap">Sends WhatsApp/Telegram messages.</div></div>
+      <div class="tool-card" data-cat="life"><div class="tname">reminder</div><div class="taction">System Reminder</div><div class="tcap">OS-level reminders via Task Scheduler.</div></div>
+      <div class="tool-card" data-cat="life"><div class="tname">save_memory</div><div class="taction">Long-term Memory</div><div class="tcap">Commits info to local JSON memory bank.</div></div>
+      <div class="tool-card" data-cat="life"><div class="tname">shutdown_jarvis</div><div class="taction">Assistant Goodbye</div><div class="tcap">Safely shuts down Jarvis engines.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="changelog" id="changelog">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Changelog</div>
+      <h2>What's shipping.</h2>
+      <p>Pulled directly from the project's update log. Editable from the admin panel.</p>
+    </div>
+    <div class="log-stream">
+      <div class="log-entry">
+        <div class="log-md" id="changelogContent">Loading changelog…</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="download" id="download">
+  <div class="wrap">
+    <div class="panel">
+      <div class="eyebrow" style="justify-content:center;">Get started</div>
+      <h2 style="margin-top:14px;">Install Jarvis on Windows.</h2>
+      <p>One installer, fully branded — desktop shortcuts, uninstall pipeline, and your choice of offline or hybrid cloud mode set up from the HUD.</p>
+      <a class="btn solid" href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2/releases/download/v2.0/THENUX_Jarvis_Setup.exe">↓ Download THENUX_Jarvis_Setup.exe</a>
+      <div class="meta">v2.0 · Windows · MIT Licensed · Built with PyInstaller + Inno Setup</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fmeta">© 2026 THENUX — Built by Thenula Panapitiya, 17, Sri Lanka</div>
+    <div class="flinks">
+      <a href="https://github.com/thenuxofc/T.H.E.N.U.X-JARVIS-V2">GitHub</a>
+      <a href="http://www.thenuxofc.store">thenuxofc.store</a>
+      <a href="#changelog">Changelog</a>
+    </div>
+  </div>
+</footer>
+
+<div class="admin-link"><a href="admin.html">⚙ Admin</a></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
